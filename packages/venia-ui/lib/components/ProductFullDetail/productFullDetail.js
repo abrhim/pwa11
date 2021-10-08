@@ -18,6 +18,11 @@ import { QuantityFields } from '../CartPage/ProductListing/quantity';
 import RichText from '../RichText';
 import defaultClasses from './productFullDetail.css';
 
+import {
+    VeniaProductRecommendations,
+    PageTypes
+} from '@magento/venia-product-recommendations';
+
 const WishlistButton = React.lazy(() => import('../Wishlist/AddToListButton'));
 const Options = React.lazy(() => import('../ProductOptions'));
 
@@ -209,6 +214,7 @@ const ProductFullDetail = props => {
                     <strong>{productDetails.sku}</strong>
                 </section>
             </Form>
+            <VeniaProductRecommendations pageType={PageTypes.PRODUCT} />
         </Fragment>
     );
 };

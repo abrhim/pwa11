@@ -8,7 +8,10 @@ import defaultClasses from './category.css';
 import { Meta } from '../../components/Head';
 import { GET_PAGE_SIZE } from './category.gql';
 import ErrorView from '@magento/venia-ui/lib/components/ErrorView';
-
+import {
+    VeniaProductRecommendations,
+    PageTypes
+} from '@magento/venia-product-recommendations';
 const Category = props => {
     const { id } = props;
 
@@ -53,6 +56,7 @@ const Category = props => {
                 sortProps={sortProps}
                 pageSize={pageSize}
             />
+            <VeniaProductRecommendations pageType={PageTypes.CATEGORY} />
         </Fragment>
     );
 };

@@ -35,7 +35,9 @@
   },
   "homepage": "https://github.com/magento/pwa-studio/tree/master/packages/venia-concept#readme",
   "dependencies": {
-    "@magento/pwa-buildpack": "10.0.0-beta.1"
+    "@magento/pwa-buildpack": "10.0.0-beta.1",
+    "@magento/venia-data-collector": "~1.0.3-qa-2",
+    "@magento/venia-product-recommendations": "~0.7.0-qa-3"
   },
   "devDependencies": {
     "@adobe/apollo-link-mutation-queue": "~1.0.2",

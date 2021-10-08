@@ -7,6 +7,10 @@ import CategoryList from '../../components/CategoryList';
 import { Meta, StoreTitle } from '../../components/Head';
 import { useStyle } from '../../classify';
 import { useIntl } from 'react-intl';
+import {
+    VeniaProductRecommendations,
+    PageTypes
+} from '@magento/venia-product-recommendations';
 
 import defaultClasses from './cms.css';
 
@@ -56,13 +60,16 @@ const CMSPage = props => {
 
     // Fallback to a category list if there is no cms content.
     return (
-        <CategoryList
-            title={formatMessage({
-                id: 'cms.shopByCategory',
-                defaultMessage: 'Shop by category'
-            })}
-            id={rootCategoryId}
-        />
+        <Fragment>
+            <VeniaProductRecommendations pageType={PageTypes.CMS} />
+            <CategoryList
+                title={formatMessage({
+                    id: 'cms.shopByCategory',
+                    defaultMessage: 'Shop by category'
+                })}
+                id={rootCategoryId}
+            />
+        </Fragment>
     );
 };
 
